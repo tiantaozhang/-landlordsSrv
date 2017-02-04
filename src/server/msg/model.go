@@ -1,5 +1,10 @@
 package msg
 
+const  (
+	Normal = 10
+)
+
+
 // Ready to start game
 type Ready struct {
 	State int `json:"state"`
@@ -30,12 +35,12 @@ type Rest struct {
 
 // Room create
 type Room struct {
-	Id     string  `json:"id"`
-	Pwd    string  `json:"pwd"`
-	Owner  string  `json:"owner"`
-	Users  [3]User `json:"users"`
-	Status int     `json:"status"`
-	Time   int     `json:"time,omitempty"`
+	Id     string  `json:"id" bson:"_id"`
+	Pwd    string  `json:"pwd" bson:"pwd"`
+	Owner  string  `json:"owner" bson:"owner"`
+	Users  [3]User `json:"users" bson:"users"`
+	Status int     `json:"status" bson:"status"`
+	Time   int     `json:"time,omitempty" bson:"time"`
 }
 
 // RoomS search
