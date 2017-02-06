@@ -38,7 +38,7 @@ type Room struct {
 	Id     string  `json:"id" bson:"_id"`
 	Pwd    string  `json:"pwd" bson:"pwd"`
 	Owner  string  `json:"owner" bson:"owner"`
-	Users  [3]User `json:"users" bson:"users"`
+	Users  [3]string `json:"users" bson:"users"`
 	Status int     `json:"status" bson:"status"`
 	Time   int     `json:"time,omitempty" bson:"time"`
 }
@@ -56,8 +56,8 @@ type RoomP struct {
 
 // user
 type User struct {
-	Uid      string `json:"uid"`
-	Pwd      string `json:"pwd"`
-	NickName string `json:"nickName"`
-	Status   int    `json:"status"`
+	Uid      string `json:"uid" bson:"uid"`
+	Pwd      string `json:"pwd" bson:"pwd"`
+	NickName string `json:"nickName" bson:"nickName"`
+	Status   int    `json:"status" bson:"status"`
 }

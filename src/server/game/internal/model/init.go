@@ -35,3 +35,4 @@ func Seq(collection string) (error, int) {
 	}, &res)
 	return err, res.Seq
 }
+

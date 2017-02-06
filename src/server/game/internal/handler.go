@@ -17,6 +17,10 @@ func handler(m interface{}, h interface{}) {
 	skeleton.RegisterChanRPC(reflect.TypeOf(m), h)
 }
 
+func handleRoom(args []interface{}) {
+
+}
+
 func handleReady(args []interface{}) {
 	// 收到的 Ready 消息
 	m := args[0].(*msg.Ready)

@@ -7,4 +7,5 @@ import (
 
 func init() {
 	msg.Processor.SetRouter(&msg.Ready{}, game.ChanRPC)
+	msg.Processor.SetRouter(&msg.Room{}, game.ChanRPC)
 }
